@@ -13,9 +13,7 @@ The pipeline consists on nine steps as described below:
 - **Blurring the image**: Applies a Gaussian blur to the image/frame, it also makes use of the opencv's **cv2.GaussianBlur** method.
 - **Finding edges**: finds edges within the image/frame. Opencv's **cv2.Canny** method is used to extract these features.
 - **Region of Interest**: Creates a mask with only the region of interest within the image/frame, saving machine resources and eliminating the risk to calculating over non-lanes edges detected on the image.
-- **Finding lines**: Finds lines withing the previously calculated region of interest using opencv's  **cv2.cv2.HoughLinesP** method. This probabilistc method is considerably faster than the original houghlines. To calculate the slope and intersect of these newly found lines, opencv's **np.polyfit** method is apply to make the process of deciding the left and right lanes easier.
-- **Averaging results**: The newly found lines with the previous step are now averaged so that the outcome is smoother.
-- **Cartesean convertion**: The newly found lines with the previous step are transformed to cartesean space.
+- **Finding lines**: Finds lines withing the previously calculated region of interest using opencv's  **cv2.cv2.HoughLinesP** method. This probabilistc method is considerably faster than the original houghlines. To calculate the slope and intersect of these newly found lines, opencv's **np.polyfit** method is apply to make the process of deciding the left and right lanes easier. The newly found lines with the previous step are now averaged so that the outcome is smoother and are then transformed to cartesean space. 
 - **Combining the results**: These lines are then placed on top of the original image/frame to be displayed to the user.
 
 The output of each step is saved in a directory:
