@@ -6,9 +6,10 @@ Following the given goals and requirements for this project, below is a overview
 # Reflections
 
 ## Description
-The pipeline consists on nine steps as described below:
+The pipeline consists on six steps as described below:
 
 - **Choice menu**: Gives the user the choice of either testing the images or videos. These have to be inside their respective folders and these folder have to be inside the same working directory.
+- **Reading image**: The original image/frame is read by using opencv's **cv2.imread** method.
 - **Converting to grayscale**: Converting to image/frame to grayscale by using opencv's **cv2.cvtColor** method.
 - **Blurring the image**: Applies a Gaussian blur to the image/frame, it also makes use of the opencv's **cv2.GaussianBlur** method.
 - **Finding edges**: finds edges within the image/frame. Opencv's **cv2.Canny** method is used to extract these features.
