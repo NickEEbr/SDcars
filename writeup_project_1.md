@@ -20,11 +20,13 @@ The pipeline consists on six steps as described below:
 The output of each step is saved in a directory:
 
 - [1 - Choice_menu](1_Choice_menu)
-- [test_images_blur](test_images_blur)
-- [test_images_canny](test_images_canny)
-- [test_images_region](test_images_region)
-- [test_images_hough](test_images_hough)
-- [test_images_merged](test_images_merged)
+- [2 - Original_image](2_Original_image)
+- [3 - Converting_to_grayscale](3_Converting_to_grayscale)
+- [4 - Blurring_the_image](4_Blurring_the_image)
+- [5 - Finding_edges](5_Finding_edges)
+- [6 - Region_of_interest](6_Region_of_interest)
+- [7 - Finding_lines](7_Finding_lines)
+- [8 - Combining_the_results](8_Combining_the_results)
 
 To average and interpolate the lines on the **draw_lines** function, I try to find the lines going on the left and right side of the image. Each point of those sides were accumulated and first degree polynomial was fit to those points using **numpy.polyfit**. When the line equation was found, it was evaluated on the region of interest to define the points where the line would be shown on the image.
 
