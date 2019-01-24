@@ -19,7 +19,7 @@ The pipeline consists on six steps as described below:
 
 The output of each step is saved in a directory:
 
-- [1 - Choice_menu](1_Choice_menus)
+- [1 - Choice_menu](1_Choice_menu)
 - [test_images_blur](test_images_blur)
 - [test_images_canny](test_images_canny)
 - [test_images_region](test_images_region)
